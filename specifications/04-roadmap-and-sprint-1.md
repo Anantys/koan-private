@@ -1,5 +1,13 @@
 # 04 — Roadmap and Sprint 1
 
+> ⚠️ **v0.1 — partially superseded after Round 1 decisions.**
+> The phase plan still maps roughly to the work, but ownership and content shift due to:
+> - New repo `koan-cloud` (separate from `anantys-back`) — Alexis owns it primarily.
+> - Multi-tenant worker model in `koan-private` — Nicolas owns it primarily.
+> - "Anantys Stack" extraction work in `anantys-back` — small carve-out, not a full migration.
+>
+> Sprint 1 deliverables are revised — see **[10 — Open questions round 2](10-open-questions-round-2.md)** §G for the updated Sprint 1 plan.
+
 ## Team
 
 | Person | Strengths | Likely owner of |
