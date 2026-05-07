@@ -1,5 +1,13 @@
 # 02 — Anantys stack reuse
 
+> ⚠️ **v0.1 — partially superseded after Round 1 decisions.**
+> Alexis chose **not** to extend the `anantys-back` monolith with a `koancloud` blueprint. Instead:
+> - Koan Cloud gets its own repo (`koan-cloud`) with its own DB, its own auth, its own user base.
+> - `anantys-back` evolves into the "Anantys Stack" — a SaaS toolkit that exposes shared services (mail, billing, websocket) via internal APIs to multiple SaaS products.
+> - See **[08 — Platformization and repo layout](08-platformization-and-repos.md)** for the revised model.
+>
+> The "what to reuse from Anantys" inventory in this doc is still useful — but the *how* (monolith extension) is wrong. Reuse happens via internal API calls or extracted packages, not blueprint registration.
+
 The biggest force multiplier for Koan Cloud is the **anantys-back** monolith. Auth, billing, mail, websocket, user lifecycle, admin tooling — it's all there, battle-tested, and on Railway. We extend it instead of forking it.
 
 This document inventories what we reuse, exactly how, and what's net-new.

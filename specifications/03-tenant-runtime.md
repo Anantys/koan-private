@@ -1,5 +1,10 @@
 # 03 — Tenant runtime (per-customer Kōan service)
 
+> ⚠️ **v0.1 — superseded after Round 1 decisions.**
+> The "1 Railway service per customer" model is **dropped**. Alexis asked for a multi-tenant worker architecture with strong context isolation. See **[07 — Multi-tenant worker model](07-multi-tenant-worker-model.md)** for the new design.
+>
+> The HTTP API surface, Anthropic key strategy, lifecycle states, and provisioning concepts in this doc remain valid in spirit — but the runtime topology has shifted from "one Koan process per customer" to "stateless worker pool processing one mission per claim."
+
 Each paying customer gets a dedicated **Kōan instance** running on a dedicated **Railway service**. This document specifies what changes inside `koan/` to make that instance a cloud-citizen, and how the control plane provisions and operates it.
 
 ## What stays unchanged

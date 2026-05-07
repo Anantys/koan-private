@@ -1,5 +1,13 @@
 # 01 — Architecture (eagle view)
 
+> ⚠️ **v0.1 — partially superseded after Round 1 decisions.**
+> Alexis confirmed several major changes that invalidate parts of this doc:
+> - Control plane is **NOT** an extension of the `anantys-back` monolith — Koan Cloud lives in its own repo with its own user DB. See **[08 — Platformization and repo layout](08-platformization-and-repos.md)**.
+> - The "1 Railway service per customer" model is dropped — see **[07 — Multi-tenant worker model](07-multi-tenant-worker-model.md)**.
+> - No session sharing with Anantys Invest. Koan Cloud is a fully distinct product with its own auth.
+>
+> This doc is preserved for archeology. Read **[06 — R1 decisions locked](06-r1-decisions-locked.md)** for the current source of truth.
+
 ## Three planes
 
 ```
